@@ -20,12 +20,17 @@ $(document).ready(function(){
             var description = value["Article/Post Description"];
             var link = value["Link to Article"];
             var image = `<img class="image" src="${value["Link to Image"]}" />`;
+            var blank = "_blank";
             if (value["Link to Image"] == null) {
                 image = "";
             }
+            if (link == "N/a") {
+                link = "#";
+                blank = "";
+            }
             var entry = `
             <div class="entry">
-                <a class="entry-link" target="_blank" href="${link}">
+                <a class="entry-link" target="${blank}" href="${link}">
                     <span class="submitter">Submitted by ${name} on ${date}</span>
                     <span class="title">${title}</span>
                     <p class="description">
