@@ -9,7 +9,9 @@ $(document).ready(function(){
             date = date.replace(/,/g, '/');
             date = date.substr(4) + date.substr(0, 4);
             date = date.substr(1);
-            
+            month = parseInt(date.substr(0, date.indexOf('/'))) + 1;
+            date = month.toString() + `/` + date.substring(date.indexOf('/') + 1);
+            console.log(date);
             var name = value["Your Name"];
             if (name == null) {
                 name = "Anonymous";
