@@ -24,7 +24,7 @@ $(document).ready(function(){
             if (value["Link to Image"] == null) {
                 image = "";
             }
-            if (link == "N/a") {
+            if (link == "N/a" || link == null) {
                 link = "#";
                 blank = "";
             }
